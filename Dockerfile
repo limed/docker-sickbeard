@@ -13,7 +13,12 @@ RUN apt-get -q update && \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/*
 
-CMD [ "mkdir -p /app", "mkdir -p /data/sickbeard" ]
+# Create app and data directory
+RUN mkdir -p /app && \
+    mkdir -p /data/sickbeard
+
+# Clone sickbeard into app directory
+RUN git clone https://github.com/midgetspy/Sick-Beard.git /app
 
 VOLUME /app
 VOLUME /data/sickbeard
