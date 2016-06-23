@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  connection: local
+  vars_file:
+    - './vars/main.yml'
+
+  tasks:
+    - name: Pull docker image
+      docker_image:
+        name: "{{ image_name }}"
+        rm: true

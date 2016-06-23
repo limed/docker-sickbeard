@@ -1,0 +1,4 @@
+---
+container_name: sickbeard
+container_state: started
+image_name: limed/sickbeard
