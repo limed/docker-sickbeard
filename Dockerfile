@@ -16,11 +16,13 @@ RUN apt-get -q update && \
 # Create app and data directory
 RUN mkdir -p /app && \
     mkdir -p /data/sickbeard && \
+    mkdir -p /data/sabnzbd && \
     git clone https://github.com/midgetspy/Sick-Beard.git /app
 
 # App dir is for apps, and /data is where config and database will live
 VOLUME /app
 VOLUME /data/sickbeard
+VOLUME /data/sabnzbd
 
 COPY files/supervisor.conf /etc/supervisor/conf.d/supervisord.conf
 
