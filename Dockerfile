@@ -1,5 +1,5 @@
 # vim: set filetype=dockerfile
-FROM limed/ubuntu-base:latest
+FROM limed/ubuntu-base:14.04
 MAINTAINER limed@sudoers.org
 
 ENV DEBIAN_FRONTEND="noninteractive"
